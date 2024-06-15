@@ -1,17 +1,17 @@
 /* Шапка */
-.main-nav {
+.header__main-nav {
   display: flex;
   align-items: center;
   /* border-bottom: 1px solid tomato; */
 }
 
-.nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
 
-header .logo {
-  color: $ligo-black;
+.logo {
+  color: $logo-black;
   font-family: raleway;
 
   font-size: 26px;
@@ -26,24 +26,24 @@ header .logo {
   }
 }
 
-.web {
+.logo__first-half {
   color: $accent-color;
 }
 
 .site-nav {
   display: flex;
   margin-left: 93px;
+}
 
-  .nav-item + .nav-item {
-    margin-left: 50px;
-  }
+.site-nav__item:not(:first-child) {
+  margin-left: 50px;
 }
 
 /* .site-nav .nav-item:not(:last-child) {
   margin-right: 50px;
 } */
 
-.nav-link {
+.site-nav__link {
   position: relative;
 
   display: block;
@@ -58,10 +58,6 @@ header .logo {
   letter-spacing: 0.28px;
 
   @include transit();
-
-  &.current {
-    color: $accent-color;
-  }
 
   &::after {
     position: absolute;
@@ -78,26 +74,30 @@ header .logo {
     opacity: 0;
   }
 
-  &.current::after {
-    opacity: 1;
-  }
-
   &:hover,
   &:focus {
     color: $accent-color;
   }
 }
 
-.auth-nav {
-  display: flex;
-  margin-left: auto;
+.site-nav__link--current {
+  color: $accent-color;
 
-  .nav-item + .nav-item {
-    margin-left: 50px;
+  &::after {
+    opacity: 1;
   }
 }
 
-.auth-link {
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.auth-nav__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -118,7 +118,7 @@ header .logo {
   }
 }
 
-.auth-icon {
+.auth-nav__icon {
   margin-right: 10px;
 
   fill: currentColor;
