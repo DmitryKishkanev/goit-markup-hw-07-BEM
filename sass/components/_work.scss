@@ -3,18 +3,18 @@
   padding-bottom: 94px;
 }
 
-.classes-items {
+.classes__card-set {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.class-item {
+.classes__item {
   position: relative;
   display: flex;
 }
 
-.class-category {
+.classes__category {
   position: absolute;
 
   width: 100%;
@@ -24,7 +24,7 @@
   background-color: $trans-bg-color;
 }
 
-.category-title {
+.classes__category-title {
   padding: 27px 0;
 
   font-family: Roboto;

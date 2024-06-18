@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.overlay {
+.hero__overlay {
   max-width: 1600px;
   height: 600px;
   padding: 200px 0;
@@ -20,7 +20,7 @@
   background-size: cover;
 }
 
-.hero-text {
+.hero__text {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -34,7 +34,7 @@
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
   border: none;
   border-radius: 4px;
   padding: 10px 32px;

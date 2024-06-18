@@ -1,4 +1,4 @@
-.our-team {
+.team {
   max-width: 1600px;
   margin: 0 auto;
   padding-top: 94px;
@@ -7,26 +7,14 @@
   background-color: $secondary-background;
 }
 
-.team {
+.team__card-set {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
-
-  .speciality {
-    margin: 0 0 16px 0;
-
-    color: $text-color;
-
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.48px;
-  }
 }
 
-.team-card {
+.team__item {
   width: 270px;
   height: 428px;
   background-color: $primary-background;
@@ -36,7 +24,8 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.team-scene {
+// Карточка
+.card__scene {
   width: 270px;
   height: 260px;
 
@@ -51,7 +40,7 @@
   }
 }
 
-.card-img {
+.card__img {
   position: relative;
   width: 100%;
   height: 100%;
@@ -60,14 +49,14 @@
   transform-style: preserve-3d;
 }
 
-.card-face {
+.card__face {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-.card-back {
+.card__back {
   position: absolute;
 
   display: flex;
@@ -82,14 +71,14 @@
   outline: 1px solid $accent-color;
 }
 
-.back-title {
+.card__back-title {
   font-size: 36px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
 }
 
-.command-title {
+.card__title {
   margin-top: 30px;
   margin-bottom: 10px;
 
@@ -100,7 +89,19 @@
   letter-spacing: 0.48px;
 }
 
-.team-link {
+.card__speciality {
+  margin: 0 0 16px 0;
+
+  color: $text-color;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+
+.team__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +128,7 @@
   }
 }
 
-.icon-network {
+.team__icon-network {
   width: 20px;
   height: 20px;
 
