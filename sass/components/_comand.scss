@@ -34,8 +34,8 @@
 
   perspective: 600px;
 
-  &:hover .card-img,
-  &:focus .card-img {
+  &:hover .card__img,
+  &:focus .card__img {
     transform: rotateY(180deg);
   }
 }
@@ -101,6 +101,7 @@
   letter-spacing: 0.48px;
 }
 
+// Соц сети
 .team__link {
   display: inline-flex;
   justify-content: center;
