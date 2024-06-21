@@ -1,4 +1,4 @@
-.main-footer {
+.footer {
   max-width: 1600px;
   height: 251px;
   padding: 60px 0px 60px 0px;
@@ -7,19 +7,29 @@
   background-color: $dark-bg-color;
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.footer-address {
+.address-block {
   margin-right: 70px;
 }
 
-address .location {
-  margin-top: 20px;
+.footer__logo {
+  color: $primary-background;
+}
 
+.address {
+  margin-top: 20px;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__text {
   color: $primary-background;
 
   font-size: 14px;
@@ -28,9 +38,8 @@ address .location {
   letter-spacing: 0.42px;
 }
 
-.address-link {
-  display: inline-block;
-  margin-bottom: 9px;
+.address__link {
+  // display: inline-block;
 
   color: $address-element;
 
@@ -40,7 +49,7 @@ address .location {
   letter-spacing: 0.42px;
 }
 
-.networks-title {
+.networks-block__title {
   display: block;
   margin-top: 14px;
   margin-bottom: 20px;
@@ -56,7 +65,7 @@ address .location {
   text-transform: uppercase;
 }
 
-.footer-link {
+.networks-block__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -80,19 +89,19 @@ address .location {
   }
 }
 
-.icon-footer {
+.networks-block__icon {
   width: 20px;
   height: 20px;
 }
 
-.newsletter {
+.newsletter-block {
   display: inline-block;
 
   margin-right: 0;
   margin-left: auto;
 }
 
-.newsletter-title {
+.newsletter-block__title {
   display: block;
   margin-top: 14px;
   margin-bottom: 20px;
@@ -108,12 +117,12 @@ address .location {
   text-transform: uppercase;
 }
 
-.newsletter-thums {
+.newsletter-block__thumb {
   display: flex;
   flex-direction: row;
 }
 
-.newsletter-field {
+.newsletter-block__field {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -144,7 +153,7 @@ address .location {
   }
 }
 
-.newsletter-btn {
+.newsletter-block__btn {
   display: flex;
   align-items: center;
   padding: 10px 0px 10px 28px;
@@ -167,7 +176,7 @@ address .location {
   cursor: pointer;
 }
 
-.icon-send {
+.newsletter-block__icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;

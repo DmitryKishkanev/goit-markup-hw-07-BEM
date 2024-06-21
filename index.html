@@ -407,83 +407,83 @@
     </main>
 
     <!--Подвал-->
-    <footer class="main-footer">
+    <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <div class="footer-address">
+        <div class="footer__container">
+          <div class="address-block">
             <a
-              class="logo logo--inverse"
+              class="logo footer__logo"
               href="/index.html"
               aria-label="Логотип"
             >
               <span class="logo__first-half">Web</span>Studio
             </a>
-            <address>
-              <p class="location">г. Киев, пр-т Леси Украинки, 26</p>
-            </address>
-            <address>
-              <ul>
-                <li class="address-element">
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+                </li>
+                <li class="address__item">
                   <a
-                    class="address-link"
+                    class="address__link"
                     href="mailto:info@devstudio.com"
                     aria-label="Имейл"
                     >info@devstudio.com</a
                   >
                 </li>
-                <li class="address-element">
-                  <a class="address-link" href="tel:с" aria-label="Телефон"
+                <li class="address__item">
+                  <a class="address__link" href="tel:с" aria-label="Телефон"
                     >+38 096 111 11 11</a
                   >
                 </li>
               </ul>
             </address>
           </div>
-          <div class="footer-networks">
-            <b class="networks-title">Присоединяйтесь</b>
-            <a class="footer-link" href="" aria-label="Инстаграм">
-              <svg class="icon-footer">
+          <div class="networks-block">
+            <b class="networks-block__title">Присоединяйтесь</b>
+            <a class="networks-block__link" href="" aria-label="Инстаграм">
+              <svg class="networks-block__icon">
                 <use
                   href="./images/sprite/sprite.svg#icon-footer-instagram"
                 ></use>
               </svg>
             </a>
-            <a class="footer-link" href="" aria-label="Твиттер">
-              <svg class="icon-footer">
+            <a class="networks-block__link" href="" aria-label="Твиттер">
+              <svg class="networks-block__icon">
                 <use href="./images/sprite/sprite.svg#icon-footer-Vector"></use>
               </svg>
             </a>
-            <a class="footer-link" href="" aria-label="Фейсбук">
-              <svg class="icon-footer">
+            <a class="networks-block__link" href="" aria-label="Фейсбук">
+              <svg class="networks-block__icon">
                 <use
                   href="./images/sprite/sprite.svg#icon-footer-facebook"
                 ></use>
               </svg>
             </a>
-            <a class="footer-link" href="" aria-label="Линкедин">
-              <svg class="icon-footer">
+            <a class="networks-block__link" href="" aria-label="Линкедин">
+              <svg class="networks-block__icon">
                 <use
                   href="./images/sprite/sprite.svg#icon-footer-linkedin"
                 ></use>
               </svg>
             </a>
           </div>
-          <div class="newsletter">
-            <b class="newsletter-title">Подпишитесь на рассылку</b>
-            <div class="newsletter-thums">
+          <div class="newsletter-block">
+            <b class="newsletter-block__title">Подпишитесь на рассылку</b>
+            <div class="newsletter-block__thumb">
               <input
-                class="newsletter-field"
+                class="newsletter-block__field"
                 type="email"
                 name="user-email"
                 placeholder="E-mail"
               />
               <button
+                class="newsletter-block__btn"
                 type="submit"
-                class="newsletter-btn"
                 aria-label="Подписаться"
               >
                 Подписаться
-                <svg class="icon-send">
+                <svg class="newsletter-block__icon">
                   <use href="./images/sprite/sprite.svg#icon-send"></use>
                 </svg>
               </button>
@@ -494,7 +494,7 @@
     </footer>
 
     <!-- Модельное окно  -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
         <button class="modal-button" data-modal-close>
           <svg class="icon-close" width="11" height="11">
