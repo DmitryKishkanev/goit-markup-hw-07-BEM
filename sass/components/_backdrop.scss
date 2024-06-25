@@ -39,7 +39,7 @@
   transform: translate(-50%, -50%) scale(1.5);
 }
 
-.modal-button {
+.modal__button {
   position: absolute;
   top: 0;
   right: 0;
@@ -67,7 +67,7 @@
   }
 }
 
-/* .icon-close {
+/* .modal__icon-close {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,7 +82,7 @@
   padding: 40px;
 }
 
-.form-title {
+.service-form__title {
   margin-top: 0;
   margin-bottom: 12px;
 
@@ -94,7 +94,7 @@
   letter-spacing: 0.03em;
 }
 
-.field-title {
+.service-form__field-title {
   position: relative;
   margin-bottom: 10px;
 
@@ -118,7 +118,7 @@
   }
 }
 
-.field {
+.service-form__field {
   width: 100%;
   height: 40px;
   padding: 12px 12px 12px 42px;
@@ -136,7 +136,7 @@
   transition: border-color $transition-time $transition-type;
 }
 
-.input-icon {
+.service-form__input-icon {
   position: absolute;
 
   width: 18px;
@@ -148,14 +148,14 @@
   fill: currentColor;
 
   transition: color $transition-time $transition-type;
-
-  .input-field input:hover + &,
-  .input-field input:focus + & {
-    color: $accent-color;
-  }
 }
 
-.field-comment {
+.service-form__field:hover + .service-form__input-icon,
+.service-form__field:focus + .service-form__input-icon {
+  color: $accent-color;
+}
+
+.service-form__field-comment {
   resize: none;
   width: 100%;
   height: 120px;
@@ -185,7 +185,7 @@
   }
 }
 
-.field-checkbox {
+.service-form__field-checkbox {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -197,7 +197,7 @@
   color: $text-color;
 }
 
-.agreement {
+.service-form__agreement {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -214,7 +214,7 @@
   overflow: hidden;
 }
 
-.chackbox-icon {
+.service-form__chackbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -224,22 +224,22 @@
   border-radius: 2px;
 
   /* background-color: tomato; */
-
-  .agreement:checked + & {
-    border-color: $accent-color;
-    background-color: $accent-color;
-    background-image: url(../images/sprite/svg/icon\ check.svg);
-    background-size: contain;
-    background-origin: border-box;
-  }
 }
 
-.agreement-link {
+.service-form__agreement:checked + .service-form__chackbox-icon {
+  border-color: $accent-color;
+  background-color: $accent-color;
+  background-image: url(../images/sprite/svg/icon\ check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.service-form__agreement-link {
   margin-left: 4px;
   color: $accent-color;
 }
 
-.send-btn {
+.service-form__send-btn {
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;

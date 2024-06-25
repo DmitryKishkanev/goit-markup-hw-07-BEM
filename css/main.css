@@ -797,7 +797,7 @@ ul {
           transform: translate(-50%, -50%) scale(1.5);
 }
 
-.modal-button {
+.modal__button {
   position: absolute;
   top: 0;
   right: 0;
@@ -822,11 +822,11 @@ ul {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover, .modal-button:focus {
+.modal__button:hover, .modal__button:focus {
   fill: #2196f3;
 }
 
-/* .icon-close {
+/* .modal__icon-close {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -845,7 +845,7 @@ ul {
   padding: 40px;
 }
 
-.form-title {
+.service-form__title {
   margin-top: 0;
   margin-bottom: 12px;
   font-style: normal;
@@ -856,7 +856,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.field-title {
+.service-form__field-title {
   position: relative;
   margin-bottom: 10px;
   color: #757575;
@@ -867,16 +867,16 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.field-title input:hover + .input-icon,
-.field-title input:focus + .input-icon {
+.service-form__field-title input:hover + .input-icon,
+.service-form__field-title input:focus + .input-icon {
   color: #2196f3;
 }
-.field-title input:hover,
-.field-title input:focus {
+.service-form__field-title input:hover,
+.service-form__field-title input:focus {
   border-color: #2196f3;
 }
 
-.field {
+.service-form__field {
   width: 100%;
   height: 40px;
   padding: 12px 12px 12px 42px;
@@ -890,7 +890,7 @@ ul {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-icon {
+.service-form__input-icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -901,11 +901,13 @@ ul {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-field input:hover + .input-icon, .input-field input:focus + .input-icon {
+
+.service-form__field:hover + .service-form__input-icon,
+.service-form__field:focus + .service-form__input-icon {
   color: #2196f3;
 }
 
-.field-comment {
+.service-form__field-comment {
   resize: none;
   width: 100%;
   height: 120px;
@@ -920,38 +922,38 @@ ul {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.field-comment:hover, .field-comment:focus {
+.service-form__field-comment:hover, .service-form__field-comment:focus {
   border-color: #2196f3;
 }
-.field-comment::-webkit-input-placeholder {
+.service-form__field-comment::-webkit-input-placeholder {
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(75, 75, 75, 0.5);
 }
-.field-comment::-moz-placeholder {
+.service-form__field-comment::-moz-placeholder {
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(75, 75, 75, 0.5);
 }
-.field-comment:-ms-input-placeholder {
+.service-form__field-comment:-ms-input-placeholder {
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(75, 75, 75, 0.5);
 }
-.field-comment::-ms-input-placeholder {
+.service-form__field-comment::-ms-input-placeholder {
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(75, 75, 75, 0.5);
 }
-.field-comment::placeholder {
+.service-form__field-comment::placeholder {
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
@@ -959,7 +961,7 @@ ul {
   color: rgba(75, 75, 75, 0.5);
 }
 
-.field-checkbox {
+.service-form__field-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -974,7 +976,7 @@ ul {
   color: #757575;
 }
 
-.agreement {
+.service-form__agreement {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -990,7 +992,7 @@ ul {
   overflow: hidden;
 }
 
-.chackbox-icon {
+.service-form__chackbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -999,7 +1001,8 @@ ul {
   border-radius: 2px;
   /* background-color: tomato; */
 }
-.agreement:checked + .chackbox-icon {
+
+.service-form__agreement:checked + .service-form__chackbox-icon {
   border-color: #2196f3;
   background-color: #2196f3;
   background-image: url(../images/sprite/svg/icon\ check.svg);
@@ -1007,12 +1010,12 @@ ul {
   background-origin: border-box;
 }
 
-.agreement-link {
+.service-form__agreement-link {
   margin-left: 4px;
   color: #2196f3;
 }
 
-.send-btn {
+.service-form__send-btn {
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -1049,7 +1052,12 @@ ul {
           justify-content: center;
   margin-bottom: 50px;
 }
-.filter-buttons button {
+
+.filter-buttons__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.filter-buttons__btn {
   display: inline-block;
   min-width: 73px;
   padding: 6px 22px;
@@ -1067,11 +1075,9 @@ ul {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-buttons .button + .button {
-  margin-left: 8px;
-}
-.filter-buttons button:hover,
-.filter-buttons button:focus {
+
+.filter-buttons__btn:hover,
+.filter-buttons__btn:focus {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);

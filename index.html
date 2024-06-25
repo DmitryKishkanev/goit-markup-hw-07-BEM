@@ -496,67 +496,77 @@
     <!-- Модельное окно  -->
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-button" data-modal-close>
-          <svg class="icon-close" width="11" height="11">
+        <button class="modal__button" data-modal-close>
+          <svg class="modal__icon-close" width="11" height="11">
             <use href="./images/sprite/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <form class="service-form">
-          <b class="form-title">Оставте свои данные, мы вам перезвоним</b>
+          <b class="service-form__title"
+            >Оставте свои данные, мы вам перезвоним</b
+          >
 
-          <label class="field-title"
+          <label class="service-form__field-title"
             >Имя
-            <input class="field" type="text" name="user-name" />
-            <svg class="input-icon">
+            <input class="service-form__field" type="text" name="user-name" />
+            <svg class="service-form__input-icon">
               <use
                 href="./images/sprite/sprite.svg#icon-person-black-18dp"
               ></use>
             </svg>
           </label>
 
-          <label class="field-title"
+          <label class="service-form__field-title"
             >Телефон
-            <input class="field" type="tel" name="user-telephone" />
-            <svg class="input-icon">
+            <input
+              class="service-form__field"
+              type="tel"
+              name="user-telephone"
+            />
+            <svg class="service-form__input-icon">
               <use
                 href="./images/sprite/sprite.svg#icon-phone-black-18dp"
               ></use>
             </svg>
           </label>
 
-          <label class="field-title"
+          <label class="service-form__field-title"
             >Почта
-            <input class="field" type="email" name="user-mail" />
-            <svg class="input-icon">
+            <input class="service-form__field" type="email" name="user-mail" />
+            <svg class="service-form__input-icon">
               <use
                 href="./images/sprite/sprite.svg#icon-email-black-18dp"
               ></use>
             </svg>
           </label>
 
-          <label class="field-title">
+          <label class="service-form__field-title">
             Комментарий
             <textarea
-              class="field-comment"
+              class="service-form__field-comment"
               name="comment"
               rows="10"
               placeholder="Введите текст"
             ></textarea>
           </label>
 
-          <label class="field-checkbox">
+          <label class="service-form__field-checkbox">
             <input
-              class="agreement"
+              class="service-form__agreement"
               type="checkbox"
               name="agreement"
               value="agreement"
             />
-            <span class="chackbox-icon"></span>
+            <span class="service-form__chackbox-icon"></span>
             Соглашаюсь с рассылкой и прнинимаю
-            <a class="agreement-link" href="">Условия договора</a>
+            <a class="service-form__agreement-link" href="">Условия договора</a>
           </label>
 
-          <button type="submit" class="send-btn" aria-label="Отправить">
+          <button
+            type="submit"
+            class="service-form__send-btn"
+            aria-label="Отправить"
+          >
             Отправить
           </button>
         </form>
