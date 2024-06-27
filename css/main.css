@@ -389,10 +389,6 @@ ul {
   -webkit-perspective: 600px;
           perspective: 600px;
 }
-.card__scene:hover .card__img, .card__scene:focus .card__img {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
 
 .card__img {
   position: relative;
@@ -406,6 +402,10 @@ ul {
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+}
+.card__scene:hover .card__img, .card__scene:focus .card__img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .card__face {
@@ -767,7 +767,6 @@ ul {
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -791,7 +790,6 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .backdrop--is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.5);
           transform: translate(-50%, -50%) scale(1.5);
@@ -867,14 +865,6 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-.service-form__field-title input:hover + .input-icon,
-.service-form__field-title input:focus + .input-icon {
-  color: #2196f3;
-}
-.service-form__field-title input:hover,
-.service-form__field-title input:focus {
-  border-color: #2196f3;
-}
 
 .service-form__field {
   width: 100%;
@@ -889,6 +879,9 @@ ul {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.service-form__field-title .service-form__field:hover, .service-form__field-title .service-form__field:focus {
+  border-color: #2196f3;
+}
 
 .service-form__input-icon {
   position: absolute;
@@ -901,9 +894,10 @@ ul {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.service-form__field:hover + .service-form__input-icon,
-.service-form__field:focus + .service-form__input-icon {
+.service-form__field:hover + .service-form__input-icon, .service-form__field:focus + .service-form__input-icon {
+  color: #2196f3;
+}
+.service-form__field-title:hover + .service-form__input-icon, .service-form__field-title:focus + .service-form__input-icon {
   color: #2196f3;
 }
 
@@ -999,9 +993,7 @@ ul {
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 2px;
-  /* background-color: tomato; */
 }
-
 .service-form__agreement:checked + .service-form__chackbox-icon {
   border-color: #2196f3;
   background-color: #2196f3;
@@ -1123,11 +1115,11 @@ ul {
           box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.card {
+.product {
   width: 100%;
 }
 
-.card__thumb {
+.product__thumb {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1153,12 +1145,12 @@ ul {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
-.card__image {
+.product__image {
   display: block;
   width: 100%;
 }
 
-.card__overlay {
+.product__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1173,12 +1165,12 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card:hover .card__overlay, .card:focus .card__overlay {
+.product:hover .product__overlay, .product:focus .product__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.card__description {
+.product__description {
   /* position: absolute;
   top: 0;
   left: 0;
@@ -1198,17 +1190,16 @@ ul {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
-.card__content {
+.product__meta {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
 
-.card__title {
+.product__title {
   margin-top: 0;
   margin-bottom: 4px;
-  text-align: left;
   color: #212121;
   font-size: 18px;
   font-weight: 700;
@@ -1216,7 +1207,7 @@ ul {
   letter-spacing: 1.08px;
 }
 
-.card__comment {
+.product__comment {
   margin-top: 0;
   margin-bottom: 0;
   color: #757575;

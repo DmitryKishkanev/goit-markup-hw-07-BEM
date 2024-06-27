@@ -33,11 +33,6 @@
   outline: 1px solid $secondary-background;
 
   perspective: 600px;
-
-  &:hover .card__img,
-  &:focus .card__img {
-    transform: rotateY(180deg);
-  }
 }
 
 .card__img {
@@ -47,6 +42,11 @@
   transform: rotateY(0);
   transition: transform 500ms $transition-type;
   transform-style: preserve-3d;
+
+  .card__scene:hover &,
+  .card__scene:focus & {
+    transform: rotateY(180deg);
+  }
 }
 
 .card__face {

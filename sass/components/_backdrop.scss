@@ -9,11 +9,11 @@
   background-color: $backdrop-color;
 
   transition: opacity $transition-time $transition-type;
-}
 
-.backdrop--is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -33,10 +33,10 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform $transition-time $transition-type;
-}
 
-.backdrop--is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 
 .modal__button {
@@ -106,16 +106,6 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
-  input:hover + .input-icon,
-  input:focus + .input-icon {
-    color: $accent-color;
-  }
-
-  input:hover,
-  input:focus {
-    border-color: $accent-color;
-  }
 }
 
 .service-form__field {
@@ -134,6 +124,11 @@
   cursor: pointer;
 
   transition: border-color $transition-time $transition-type;
+
+  .service-form__field-title &:hover,
+  .service-form__field-title &:focus {
+    border-color: $accent-color;
+  }
 }
 
 .service-form__input-icon {
@@ -147,12 +142,17 @@
 
   fill: currentColor;
 
-  transition: color $transition-time $transition-type;
-}
+  @include transit();
 
-.service-form__field:hover + .service-form__input-icon,
-.service-form__field:focus + .service-form__input-icon {
-  color: $accent-color;
+  .service-form__field:hover + &,
+  .service-form__field:focus + & {
+    color: $accent-color;
+  }
+
+  .service-form__field-title:hover + &,
+  .service-form__field-title:focus + & {
+    color: $accent-color;
+  }
 }
 
 .service-form__field-comment {
@@ -223,15 +223,13 @@
   border: 2px solid $chackbox-color;
   border-radius: 2px;
 
-  /* background-color: tomato; */
-}
-
-.service-form__agreement:checked + .service-form__chackbox-icon {
-  border-color: $accent-color;
-  background-color: $accent-color;
-  background-image: url(../images/sprite/svg/icon\ check.svg);
-  background-size: contain;
-  background-origin: border-box;
+  .service-form__agreement:checked + & {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/sprite/svg/icon\ check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
 }
 
 .service-form__agreement-link {
