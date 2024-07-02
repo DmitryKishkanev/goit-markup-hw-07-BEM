@@ -31,8 +31,8 @@
   line-height: 1.6;
   letter-spacing: 0.48px;
 
-  transition: color $transition-time $transition-type,
-    background $transition-time $transition-type;
+  @include transit(color);
+  @include transit(background);
 }
 
 .filter-buttons__btn:hover,

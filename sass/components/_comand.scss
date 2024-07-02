@@ -1,3 +1,4 @@
+// Команда
 .team {
   max-width: 1600px;
   margin: 0 auto;
@@ -115,8 +116,8 @@
   background-position: center;
   color: $icon-network;
 
-  transition: color $transition-time $transition-type,
-    background $transition-time $transition-type;
+  @include transit(color);
+  @include transit(background);
 
   &:not(:last-child) {
     margin-right: 10px;

@@ -18,7 +18,7 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
-  @include transit();
+  @include transit(color);
 
   &:hover,
   &:focus {
@@ -61,7 +61,7 @@
   line-height: normal;
   letter-spacing: 0.28px;
 
-  @include transit();
+  @include transit(color);
 
   &::after {
     position: absolute;
@@ -114,7 +114,7 @@
   line-height: 1.2;
   letter-spacing: 2%;
 
-  @include transit();
+  @include transit(color);
 
   &:hover,
   &:focus {

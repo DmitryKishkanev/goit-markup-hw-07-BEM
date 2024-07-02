@@ -47,7 +47,7 @@
 
   background-color: $card-bg-color;
 
-  transition: transform $transition-time $transition-type;
+  @include transit(transform);
 
   .product:hover &,
   .product:focus & {

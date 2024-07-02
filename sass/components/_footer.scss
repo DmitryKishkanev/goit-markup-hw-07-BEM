@@ -77,7 +77,7 @@
   background-position: center;
   background-color: $background-icon;
 
-  transition: background $transition-time $transition-type;
+  @include transit(background);
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -135,6 +135,8 @@
   color: $networks-title;
 
   outline: none;
+
+  @include transit(border-color);
 
   &::placeholder {
     font-family: Roboto;
